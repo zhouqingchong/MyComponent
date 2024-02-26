@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="新文件夹\**" />
+    <EmbeddedResource Remove="新文件夹\**" />
+    <None Remove="新文件夹\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DMS.Common" Version="4.4.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0" />
+    <PackageReference Include="Microsoft.OpenApi" Version="1.4.3" />
+    <PackageReference Include="NSwag.AspNetCore" Version="13.20.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+    <PackageReference Include="ZymLabs.NSwag.FluentValidation" Version="0.6.2" />
+  </ItemGroup>
+
+</Project>

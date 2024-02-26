@@ -1,0 +1,139 @@
+﻿using App.Compoment.Library.Log.Serilog;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using Serilog;
+using Serilog.Events;
+using Serilog.Exceptions;
+using Serilog.Formatting.Compact;
+
+namespace App.Compoment.Extension.LogExtension.Serilog
+{
+    public static class SerilogExtensions
+    {
+        public static void RegisterSerilog(this WebApplicationBuilder builder)
+        {
+            builder.Services.AddOptions<LoggerSettings>().BindConfiguration(nameof(LoggerSettings));
+
+            _ = builder.Host.UseSerilog((_, sp, serilogConfig) =>
+            {
+                var loggerSettings = sp.GetRequiredService<IOptions<LoggerSettings>>().Value;
+                string appName = loggerSettings.AppName;
+                string elasticSearchUrl = loggerSettings.ElasticSearchUrl;
+                bool writeToFile = loggerSettings.WriteToFile;
+                bool structuredConsoleLogging = loggerSettings.StructuredConsoleLogging;
+                string minLogLevel = loggerSettings.MinimumLogLevel;
+                //ConfigureEnrichers(serilogConfig, appName);
+                ConfigureConsoleLogging(serilogConfig, structuredConsoleLogging);
+                ConfigureWriteToFile(serilogConfig, loggerSettings);
+                //ConfigureElasticSearch(builder, serilogConfig, appName, elasticSearchUrl);
+                SetMinimumLogLevel(serilogConfig, minLogLevel);
+                OverideMinimumLogLevel(serilogConfig);
+            });
+
+            builder.Services.AddTransient<ILoggers,Loggers>();
+        }
+
+        private static void ConfigureEnrichers(LoggerConfiguration serilogConfig, string appName)
+        {
+            serilogConfig
+                            .Enrich.FromLogContext()
+                            .Enrich.WithProperty("Application", appName)
+                            .Enrich.WithExceptionDetails()
+                            .Enrich.WithMachineName()
+                            .Enrich.WithProcessId()
+                            .Enrich.WithThreadId()
+                            .Enrich.FromLogContext();
+        }
+
+        private static void ConfigureConsoleLogging(LoggerConfiguration serilogConfig, bool structuredConsoleLogging)
+        {
+            if (structuredConsoleLogging)
+            {
+                serilogConfig.WriteTo.Async(wt => wt.Console(new CompactJsonFormatter()));
+            }
+            else
+            {
+                serilogConfig.WriteTo.Async(wt => wt.Console());
+            }
+        }
+
+        /// <summary>
+        /// 写文件配置项
+        /// </summary>
+        /// <param name="serilogConfig"></param>
+        /// <param name="writeToFile"></param>
+        private static void ConfigureWriteToFile(LoggerConfiguration serilogConfig, LoggerSettings settings)
+        {
+            if (settings.WriteToFile)
+            {
+                var path = "";
+                switch (settings.MinimumLogLevel)
+                {
+                    case "Error":
+                        path = "Logs/Error/.log";
+                        break;
+                    case "Warning":
+                        path = "Logs/Warning/.log";
+                        break;
+                    default:
+                        path = "Logs/Information/.log";
+                        break;
+                }
+                serilogConfig.WriteTo.File(
+                 path,
+                 (LogEventLevel)Enum.Parse(typeof(LogEventLevel), settings.MinimumLogLevel),
+                 "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}",
+                 rollingInterval: RollingInterval.Day,
+                 retainedFileCountLimit: 5);
+            }
+        }
+
+        private static void ConfigureElasticSearch(WebApplicationBuilder builder, LoggerConfiguration serilogConfig, string appName, string elasticSearchUrl)
+        {
+            if (!string.IsNullOrEmpty(elasticSearchUrl))
+            {
+                string? formattedAppName = appName?.ToLower().Replace(".", "-").Replace(" ", "-");
+                string indexFormat = $"{formattedAppName}-logs-{builder.Environment.EnvironmentName?.ToLower().Replace(".", "-")}-{DateTime.UtcNow:yyyy-MM}";
+                serilogConfig.WriteTo.Async(writeTo =>
+                writeTo.Elasticsearch(new(new Uri(elasticSearchUrl))
+                {
+                    AutoRegisterTemplate = true,
+                    IndexFormat = indexFormat,
+                    MinimumLogEventLevel = LogEventLevel.Information,
+                })).Enrich.WithProperty("Environment", builder.Environment.EnvironmentName!);
+            }
+        }
+
+        private static void OverideMinimumLogLevel(LoggerConfiguration serilogConfig)
+        {
+            serilogConfig
+                         .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+                         .MinimumLevel.Override("Hangfire", LogEventLevel.Warning)
+                         .MinimumLevel.Override("Microsoft.Hosting.Lifetime", LogEventLevel.Information)
+                         .MinimumLevel.Override("Microsoft.EntityFrameworkCore", LogEventLevel.Error);
+        }
+
+        private static void SetMinimumLogLevel(LoggerConfiguration serilogConfig, string minLogLevel)
+        {
+            switch (minLogLevel.ToLower())
+            {
+                case "debug":
+                    serilogConfig.MinimumLevel.Debug();
+                    break;
+                case "information":
+                    serilogConfig.MinimumLevel.Information();
+                    break;
+                case "warning":
+                    serilogConfig.MinimumLevel.Warning();
+                    break;
+                case "error":
+                    serilogConfig.MinimumLevel.Error();
+                    break;
+                default:
+                    serilogConfig.MinimumLevel.Information();
+                    break;
+            }
+        }
+    }
+}

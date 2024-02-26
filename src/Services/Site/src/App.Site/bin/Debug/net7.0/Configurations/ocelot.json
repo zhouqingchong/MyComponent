@@ -1,0 +1,59 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "{url}",  //服务地址--url变量
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "{url}", //网关地址--url变量
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "UseServiceDiscovery": true,
+      "ServiceName": "Appservice", //consul服务名称
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "192.168.2.146",
+          "Port": 5000
+        }
+      ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin" //LeastConnection：最少连接数的服务器，NoLoadBalance：不负载均衡，CookiestickySessions：回话粘滞，RoundRobin：轮询
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [ "" ],  //白名单 ClientId 区分大小写
+        "EnableRateLimiting": true,
+        "Period": "5m", //1s, 5m, 1h, 1d
+        "PeriodTimespan": 300,   //多少秒之后客户端可以重试
+        "Limit": 5  //统计时间段内允许的最大请求数量
+      },
+      "QoSOptions": {   //熔断
+        "ExceptionsAllowedBeforeBreaking": 3,  //允许多少个异常请求
+        "DurationOfBreak": 10000,  //熔断时间  单位ms
+        "TimeoutValue": 2000   // ms，如果下游请求的处理时间超过多少则自己将请求设置为超时
+      },
+      "FileCacheOptions": {
+        "TtlSeconds": 15,  //sencond
+        "Region": "UserCache"  //可以调用Api缓存清理
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "UserGatewayKey",
+        "AllowedScopes": [ "Appservice" ]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Teacher"
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "",  //网关对外地址
+    "ServiceDiscoveryProvider": {
+      "Host": "192.168.2.146",
+      "Port": 8500,
+      "Type": "PollConsul",   //由Consul提供服务发现，每次请求去consul
+      "PollingInterval": 1000  //轮询consul，频率毫秒--down掉是不知道的
+    },
+    "RateLimitOptions": {
+      "DisableRateLimitHeaders": false,
+      "QuotaExceededMessage": "Too many requests, maybe later? 11",
+      "HttpStatusCode": 666,
+      "ClientIdHeader": "client_id"
+    }
+  }
+}

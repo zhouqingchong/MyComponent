@@ -1,0 +1,214 @@
+[10:00:33 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The JSON property name for 'App.Compoment.Enterprise.DDB.FromDDB_Product.productStatus' collides with another property.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_SerializerPropertyNameConflict(Type type, String propertyName)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo.CacheMember(JsonPropertyInfo jsonPropertyInfo, JsonPropertyDictionary`1 propertyCache, Dictionary`2& ignoredMembers)
+   at System.Text.Json.Serialization.Metadata.ReflectionJsonTypeInfo`1.LateAddProperties()
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo.InitializePropertyCache()
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo.Configure()
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo.<EnsureConfigured>g__ConfigureLocked|143_0()
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Boolean resolveIfMutable)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo.get_ElementTypeInfo()
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWriteAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.ArrayConverter`2.OnWriteResume(Utf8JsonWriter writer, TElement[] array, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, JsonTypeInfo jsonTypeInfo, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[10:03:54 ERR] An unhandled exception has occurred while executing the request.
+System.AggregateException: One or more errors occurred. (Timeout awaiting response (outbound=0KiB, inbound=0KiB, 12172ms elapsed, timeout is 5000ms), command=GET, next: GET USD, inst: 0, qu: 0, qs: 4, aw: True, bw: SpinningDown, rs: DequeueResult, ws: Writing, in: 0, in-pipe: 908, out-pipe: 0, last-in: 219, cur-in: 681, sync-ops: 0, async-ops: 86, serverEndpoint: 127.0.0.1:6379, conn-sec: 1782.06, aoc: 0, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-6KAMJ4P(SE.Redis-v2.6.122.38350), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=10,Free=32757,Min=20,Max=32767), POOL: (Threads=10,QueuedItems=0,CompletedItems=2482,Timers=3), v: 2.6.122.38350 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts))
+ ---> StackExchange.Redis.RedisTimeoutException: Timeout awaiting response (outbound=0KiB, inbound=0KiB, 12172ms elapsed, timeout is 5000ms), command=GET, next: GET USD, inst: 0, qu: 0, qs: 4, aw: True, bw: SpinningDown, rs: DequeueResult, ws: Writing, in: 0, in-pipe: 908, out-pipe: 0, last-in: 219, cur-in: 681, sync-ops: 0, async-ops: 86, serverEndpoint: 127.0.0.1:6379, conn-sec: 1782.06, aoc: 0, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-6KAMJ4P(SE.Redis-v2.6.122.38350), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=10,Free=32757,Min=20,Max=32767), POOL: (Threads=10,QueuedItems=0,CompletedItems=2482,Timers=3), v: 2.6.122.38350 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+   at App.compoment.Cache.Redis.RedisRepository.GetValueAsync(String key) in D:\Appservice\src\Conpoment\App.compoment.Cache\Redis\RedisRepository.cs:line 73
+   at App.Compoment.Framework.CurrencyExtension.GetCurrency(String currencyCode) in D:\Appservice\src\Conpoment\App.Compoment.Framework\CurrencyExtension.cs:line 49
+   at App.Compoment.DynamoDB.Repositories.DDB_Product.BatchGetItemAsync(String[] skus, String currencyCode, String Language) in D:\Appservice\src\Conpoment\App.Compoment.DynamoDB\Repositories\DDB_Product.cs:line 37
+   at App.Site.Data.BaseService.AdvertisementManager.<>c__DisplayClass8_0.<<HomePageNewarrivalAd>b__1>d.MoveNext() in D:\Appservice\src\Services\Site\src\App.Site.Data\BaseService\AdvertisementManager.cs:line 55
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at App.Site.Data.BaseService.AdvertisementManager.<>c.<HomePageNewarrivalAd>b__8_0(Task`1 x) in D:\Appservice\src\Services\Site\src\App.Site.Data\BaseService\AdvertisementManager.cs:line 64
+   at System.Linq.Enumerable.SelectArrayIterator`2.ToArray()
+   at App.Site.Data.BaseService.AdvertisementManager.HomePageNewarrivalAd(Currency currency, Int32 parentId, String language) in D:\Appservice\src\Services\Site\src\App.Site.Data\BaseService\AdvertisementManager.cs:line 64
+   at App.Site.Core.RepositoryAdvertisement.HomePageNewarrivalAd(Currency currency, Int32 parentId, String language) in D:\Appservice\src\Services\Site\src\App.Site.Core\RepositoryAdvertisement.cs:line 18
+   at App.Site.Controllers.Advertisement.HomePageNewarrivalAd(String CurrencyCode, Int32 parentId, String language) in D:\Appservice\src\Services\Site\src\App.Site\Controllers\Advertisement.cs:line 31
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[10:12:58 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The JSON property name for 'App.Compoment.Enterprise.DDB.FromDDB_Product.productStatus' collides with another property.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_SerializerPropertyNameConflict(Type type, String propertyName)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo.CacheMember(JsonPropertyInfo jsonPropertyInfo, JsonPropertyDictionary`1 propertyCache, Dictionary`2& ignoredMembers)
+   at System.Text.Json.Serialization.Metadata.ReflectionJsonTypeInfo`1.LateAddProperties()
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo.InitializePropertyCache()
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo.Configure()
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo.<EnsureConfigured>g__ConfigureLocked|143_0()
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Boolean resolveIfMutable)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo.get_ElementTypeInfo()
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWriteAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.ArrayConverter`2.OnWriteResume(Utf8JsonWriter writer, TElement[] array, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, JsonTypeInfo jsonTypeInfo, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[10:18:54 ERR] An unhandled exception has occurred while executing the request.
+System.AggregateException: One or more errors occurred. (Timeout awaiting response (outbound=0KiB, inbound=1KiB, 16046ms elapsed, timeout is 5000ms), command=GET, next: GET USD, inst: 0, qu: 37, qs: 4, aw: True, bw: CheckingForTimeoutComplete, rs: DequeueResult, ws: Writing, in: 0, in-pipe: 908, out-pipe: 0, last-in: 219, cur-in: 227, sync-ops: 0, async-ops: 119, serverEndpoint: 127.0.0.1:6379, conn-sec: 57.15, aoc: 0, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-6KAMJ4P(SE.Redis-v2.6.122.38350), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=3,Free=32764,Min=20,Max=32767), POOL: (Threads=13,QueuedItems=0,CompletedItems=519,Timers=3), v: 2.6.122.38350 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts))
+ ---> StackExchange.Redis.RedisTimeoutException: Timeout awaiting response (outbound=0KiB, inbound=1KiB, 16046ms elapsed, timeout is 5000ms), command=GET, next: GET USD, inst: 0, qu: 37, qs: 4, aw: True, bw: CheckingForTimeoutComplete, rs: DequeueResult, ws: Writing, in: 0, in-pipe: 908, out-pipe: 0, last-in: 219, cur-in: 227, sync-ops: 0, async-ops: 119, serverEndpoint: 127.0.0.1:6379, conn-sec: 57.15, aoc: 0, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-6KAMJ4P(SE.Redis-v2.6.122.38350), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=3,Free=32764,Min=20,Max=32767), POOL: (Threads=13,QueuedItems=0,CompletedItems=519,Timers=3), v: 2.6.122.38350 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+   at App.compoment.Cache.Redis.RedisRepository.GetValueAsync(String key) in D:\Appservice\src\Conpoment\App.compoment.Cache\Redis\RedisRepository.cs:line 73
+   at App.Compoment.Framework.CurrencyExtension.GetCurrency(String currencyCode) in D:\Appservice\src\Conpoment\App.Compoment.Framework\CurrencyExtension.cs:line 49
+   at App.Compoment.DynamoDB.Repositories.DDB_Product.BatchGetItemAsync(String[] skus, String currencyCode, String Language) in D:\Appservice\src\Conpoment\App.Compoment.DynamoDB\Repositories\DDB_Product.cs:line 37
+   at App.Site.Data.BaseService.AdvertisementManager.<>c__DisplayClass8_0.<<HomePageNewarrivalAd>b__1>d.MoveNext() in D:\Appservice\src\Services\Site\src\App.Site.Data\BaseService\AdvertisementManager.cs:line 55
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at App.Site.Data.BaseService.AdvertisementManager.<>c.<HomePageNewarrivalAd>b__8_0(Task`1 x) in D:\Appservice\src\Services\Site\src\App.Site.Data\BaseService\AdvertisementManager.cs:line 64
+   at System.Linq.Enumerable.SelectArrayIterator`2.ToArray()
+   at App.Site.Data.BaseService.AdvertisementManager.HomePageNewarrivalAd(Currency currency, Int32 parentId, String language) in D:\Appservice\src\Services\Site\src\App.Site.Data\BaseService\AdvertisementManager.cs:line 64
+   at App.Site.Core.RepositoryAdvertisement.HomePageNewarrivalAd(Currency currency, Int32 parentId, String language) in D:\Appservice\src\Services\Site\src\App.Site.Core\RepositoryAdvertisement.cs:line 18
+   at App.Site.Controllers.Advertisement.HomePageNewarrivalAd(String CurrencyCode, Int32 parentId, String language) in D:\Appservice\src\Services\Site\src\App.Site\Controllers\Advertisement.cs:line 31
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[10:22:12 ERR] An unhandled exception has occurred while executing the request.
+System.AggregateException: One or more errors occurred. (Timeout awaiting response (outbound=2KiB, inbound=1KiB, 20968ms elapsed, timeout is 5000ms), command=GET, next: GET cache_tvc_site_productlist_detail_GetListItem_660200984A_en_USD, inst: 0, qu: 0, qs: 35, aw: False, bw: SpinningDown, rs: DequeueResult, ws: Idle, in: 0, in-pipe: 1285, out-pipe: 0, last-in: 0, cur-in: 1285, sync-ops: 0, async-ops: 186, serverEndpoint: 127.0.0.1:6379, conn-sec: 71.52, aoc: 0, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-6KAMJ4P(SE.Redis-v2.6.122.38350), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=8,Free=32759,Min=20,Max=32767), POOL: (Threads=12,QueuedItems=0,CompletedItems=860,Timers=5), v: 2.6.122.38350 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts))
+ ---> StackExchange.Redis.RedisTimeoutException: Timeout awaiting response (outbound=2KiB, inbound=1KiB, 20968ms elapsed, timeout is 5000ms), command=GET, next: GET cache_tvc_site_productlist_detail_GetListItem_660200984A_en_USD, inst: 0, qu: 0, qs: 35, aw: False, bw: SpinningDown, rs: DequeueResult, ws: Idle, in: 0, in-pipe: 1285, out-pipe: 0, last-in: 0, cur-in: 1285, sync-ops: 0, async-ops: 186, serverEndpoint: 127.0.0.1:6379, conn-sec: 71.52, aoc: 0, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-6KAMJ4P(SE.Redis-v2.6.122.38350), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=8,Free=32759,Min=20,Max=32767), POOL: (Threads=12,QueuedItems=0,CompletedItems=860,Timers=5), v: 2.6.122.38350 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+   at App.compoment.Cache.Redis.RedisRepository.GetValueAsync(String key) in D:\Appservice\src\Conpoment\App.compoment.Cache\Redis\RedisRepository.cs:line 73
+   at App.Compoment.Framework.CurrencyExtension.GetCurrency(String currencyCode) in D:\Appservice\src\Conpoment\App.Compoment.Framework\CurrencyExtension.cs:line 49
+   at App.Compoment.DynamoDB.Repositories.DDB_Product.BatchGetItemAsync(String[] skus, String currencyCode, String Language) in D:\Appservice\src\Conpoment\App.Compoment.DynamoDB\Repositories\DDB_Product.cs:line 37
+   at App.Site.Data.BaseService.AdvertisementManager.<>c__DisplayClass8_0.<<HomePageNewarrivalAd>b__1>d.MoveNext() in D:\Appservice\src\Services\Site\src\App.Site.Data\BaseService\AdvertisementManager.cs:line 55
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at App.Site.Data.BaseService.AdvertisementManager.<>c.<HomePageNewarrivalAd>b__8_0(Task`1 x) in D:\Appservice\src\Services\Site\src\App.Site.Data\BaseService\AdvertisementManager.cs:line 64
+   at System.Linq.Enumerable.SelectArrayIterator`2.ToArray()
+   at App.Site.Data.BaseService.AdvertisementManager.HomePageNewarrivalAd(Currency currency, Int32 parentId, String language) in D:\Appservice\src\Services\Site\src\App.Site.Data\BaseService\AdvertisementManager.cs:line 64
+   at App.Site.Core.RepositoryAdvertisement.HomePageNewarrivalAd(Currency currency, Int32 parentId, String language) in D:\Appservice\src\Services\Site\src\App.Site.Core\RepositoryAdvertisement.cs:line 18
+   at App.Site.Controllers.Advertisement.HomePageNewarrivalAd(String CurrencyCode, Int32 parentId, String language) in D:\Appservice\src\Services\Site\src\App.Site\Controllers\Advertisement.cs:line 31
+   at lambda_method24(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[18:05:26 ERR] An unhandled exception has occurred while executing the request.
+System.AggregateException: One or more errors occurred. (Timeout awaiting response (outbound=0KiB, inbound=0KiB, 27375ms elapsed, timeout is 5000ms), command=GET, next: GET USD, inst: 0, qu: 6, qs: 1, aw: True, bw: Activating, rs: DequeueResult, ws: Writing, in: 0, in-pipe: 227, out-pipe: 0, last-in: 219, cur-in: 227, sync-ops: 0, async-ops: 38, serverEndpoint: 127.0.0.1:6379, conn-sec: 105.83, aoc: 0, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-6KAMJ4P(SE.Redis-v2.6.122.38350), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=2,Free=32765,Min=20,Max=32767), POOL: (Threads=12,QueuedItems=0,CompletedItems=427,Timers=2), v: 2.6.122.38350 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts))
+ ---> StackExchange.Redis.RedisTimeoutException: Timeout awaiting response (outbound=0KiB, inbound=0KiB, 27375ms elapsed, timeout is 5000ms), command=GET, next: GET USD, inst: 0, qu: 6, qs: 1, aw: True, bw: Activating, rs: DequeueResult, ws: Writing, in: 0, in-pipe: 227, out-pipe: 0, last-in: 219, cur-in: 227, sync-ops: 0, async-ops: 38, serverEndpoint: 127.0.0.1:6379, conn-sec: 105.83, aoc: 0, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-6KAMJ4P(SE.Redis-v2.6.122.38350), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=2,Free=32765,Min=20,Max=32767), POOL: (Threads=12,QueuedItems=0,CompletedItems=427,Timers=2), v: 2.6.122.38350 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+   at App.compoment.Cache.Redis.RedisRepository.GetValueAsync(String key) in D:\Appservice\src\Conpoment\App.compoment.Cache\Redis\RedisRepository.cs:line 73
+   at App.Compoment.Framework.CurrencyExtension.GetCurrency(String currencyCode) in D:\Appservice\src\Conpoment\App.Compoment.Framework\CurrencyExtension.cs:line 49
+   at App.Compoment.DynamoDB.Repositories.DDB_Product.BatchGetItemAsync(String[] skus, String currencyCode, String Language) in D:\Appservice\src\Conpoment\App.Compoment.DynamoDB\Repositories\DDB_Product.cs:line 37
+   at App.Site.Data.BaseService.AdvertisementManager.<>c__DisplayClass8_0.<<HomePageNewarrivalAd>b__1>d.MoveNext() in D:\Appservice\src\Services\Site\src\App.Site.Data\BaseService\AdvertisementManager.cs:line 55
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at App.Site.Data.BaseService.AdvertisementManager.<>c.<HomePageNewarrivalAd>b__8_0(Task`1 x) in D:\Appservice\src\Services\Site\src\App.Site.Data\BaseService\AdvertisementManager.cs:line 64
+   at System.Linq.Enumerable.SelectArrayIterator`2.ToArray()
+   at App.Site.Data.BaseService.AdvertisementManager.HomePageNewarrivalAd(Currency currency, Int32 parentId, String language) in D:\Appservice\src\Services\Site\src\App.Site.Data\BaseService\AdvertisementManager.cs:line 64
+   at App.Site.Core.RepositoryAdvertisement.HomePageNewarrivalAd(Currency currency, Int32 parentId, String language) in D:\Appservice\src\Services\Site\src\App.Site.Core\RepositoryAdvertisement.cs:line 18
+   at App.Site.Controllers.Advertisement.HomePageNewarrivalAd(String CurrencyCode, Int32 parentId, String language) in D:\Appservice\src\Services\Site\src\App.Site\Controllers\Advertisement.cs:line 31
+   at lambda_method14(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)

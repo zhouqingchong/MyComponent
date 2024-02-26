@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Content Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Consul" Version="1.7.14.1" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.11" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Ocelot" Version="20.0.0" />
+    <PackageReference Include="Ocelot.Provider.Consul" Version="20.0.0" />
+    <PackageReference Include="Ocelot.Provider.Polly" Version="20.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Conpoment\App.Compoment.Auth\App.Compoment.Auth.csproj" />
+    <ProjectReference Include="..\..\..\..\Conpoment\App.compoment.Cache\App.compoment.Cache.csproj" />
+    <ProjectReference Include="..\..\..\..\Conpoment\App.Compoment.DynamoDB\App.Compoment.DynamoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\Conpoment\App.Compoment.Enterprise\App.Compoment.Enterprise.csproj" />
+    <ProjectReference Include="..\..\..\..\Conpoment\App.Compoment.Extension\App.Compoment.Extension.csproj" />
+    <ProjectReference Include="..\..\..\..\Conpoment\App.Compoment.Host\App.Compoment.Host.csproj" />
+    <ProjectReference Include="..\..\..\..\Conpoment\App.Compoment.Library\App.Compoment.Library.csproj" />
+    <ProjectReference Include="..\..\..\..\Conpoment\App.Compoment.Swagger\App.Compoment.Swagger.csproj" />
+    <ProjectReference Include="..\..\..\Users\src\App.Users.Constract\App.Users.Constract.csproj" />
+    <ProjectReference Include="..\..\..\Users\src\App.Users.Core\App.Users.Core.csproj" />
+    <ProjectReference Include="..\App.Site.Contract\App.Site.Contract.csproj" />
+    <ProjectReference Include="..\App.Site.Core\App.Site.Core.csproj" />
+  </ItemGroup>
+
+</Project>

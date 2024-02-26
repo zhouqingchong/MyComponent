@@ -1,0 +1,14 @@
+{
+  "LoggerSettings": {
+    "AppName": "App.Users.Api",
+    "ElasticSearchUrl": "http://192.168.2.143:9200",
+    "WriteToFile": true,
+    "StructuredConsoleLogging": true,
+    "MinimumLogLevel": "Error",
+    "LogPath": {
+      "Error": "Logs/Error/.log",
+      "Information": "Logs/Information/.log",
+      "Warning": "Logs/Warning/.log"
+    }
+  }
+}

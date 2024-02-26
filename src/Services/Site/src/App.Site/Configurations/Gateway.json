@@ -1,0 +1,17 @@
+{
+  "ConsulClientOptions": {
+    "IP": "",
+    "Port": 8500,
+    "Datacenter": "dc1"
+  },
+  "ConsulRegisterOptions": {
+    "IP": "",
+    "Port": 5000,
+    "GroupName": "Appservice",
+    "HealthCheckUrl": "",
+    "Interval": 10,
+    "Timeout": 5,
+    "DeregisterCriticalServiceAfter": 20,
+    "Tag": "13"
+  }
+}

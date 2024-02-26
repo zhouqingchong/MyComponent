@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+	  <AssemblyVersion>2023.10.24.1</AssemblyVersion>
+	  <FileVersion>2023.10.24.1</FileVersion>
+	  <Version>2023.10.24.1</Version>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

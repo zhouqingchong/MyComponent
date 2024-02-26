@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>App.Compoment.Swagger</id>
+    <version>2023.10.24.1</version>
+    <authors>App.Compoment.Swagger</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net7.0">
+        <dependency id="App.Compoment.Library" version="2023.10.24.1" exclude="Build,Analyzers" />
+        <dependency id="DMS.Common" version="4.4.2" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Http.Abstractions" version="2.2.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Swashbuckle.AspNetCore" version="6.5.0" exclude="Build,Analyzers" />
+        <dependency id="Swashbuckle.AspNetCore.Filters" version="7.0.11" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Appservice\src\Conpoment\App.Compoment.Swagger\bin\Debug\net7.0\App.Compoment.Swagger.dll" target="lib\net7.0\App.Compoment.Swagger.dll" />
+  </files>
+</package>

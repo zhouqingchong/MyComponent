@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "App.Compoment.Zookeeper/2023.10.24.1": {
+        "runtime": {
+          "App.Compoment.Zookeeper.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "App.Compoment.Zookeeper/2023.10.24.1": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

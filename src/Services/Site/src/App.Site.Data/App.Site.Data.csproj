@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Conpoment\App.compoment.Cache\App.compoment.Cache.csproj" />
+    <ProjectReference Include="..\..\..\..\Conpoment\App.Compoment.DynamoDB\App.Compoment.DynamoDB.csproj" />
+    <ProjectReference Include="..\..\..\..\Conpoment\App.Compoment.Enterprise\App.Compoment.Enterprise.csproj" />
+    <ProjectReference Include="..\..\..\..\Conpoment\App.Compoment.Framework\App.Compoment.Framework.csproj" />
+    <ProjectReference Include="..\..\..\..\Conpoment\App.Compoment.Host\App.Compoment.Host.csproj" />
+    <ProjectReference Include="..\..\..\..\Conpoment\App.Compoment.Library\App.Compoment.Library.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DataPithy">
+      <HintPath>..\..\..\..\..\Package\DataPithy.dll</HintPath>
+    </Reference>
+    <Reference Include="Dennis.Data.MySql">
+      <HintPath>..\..\..\..\..\Package\Dennis.Data.MySql.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

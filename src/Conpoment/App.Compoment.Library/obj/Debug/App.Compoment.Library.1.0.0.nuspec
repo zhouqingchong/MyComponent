@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>App.Compoment.Library</id>
+    <version>1.0.0</version>
+    <authors>App.Compoment.Library</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net7.0">
+        <dependency id="DMS.Common" version="4.4.2" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Appservice\App.Compoment.Library\bin\Debug\net7.0\App.Compoment.Library.dll" target="lib\net7.0\App.Compoment.Library.dll" />
+  </files>
+</package>

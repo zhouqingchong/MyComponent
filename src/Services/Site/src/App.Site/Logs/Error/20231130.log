@@ -1,0 +1,78 @@
+[14:43:42 ERR] An unhandled exception has occurred while executing the request.
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+ ---> System.ArgumentException: The host name or IP address is invalid.
+   at MySql.Data.Common.StreamCreator.GetTcpStreamAsync(MySqlConnectionStringBuilder settings, CancellationToken cancellationToken, Boolean execAsync)
+   at MySql.Data.Common.StreamCreator.GetStreamAsync(MySqlConnectionStringBuilder settings, CancellationToken cancellationToken, Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.NativeDriver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.CreateAsync(MySqlConnectionStringBuilder settings, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.CreateAsync(MySqlConnectionStringBuilder settings, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriverAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.GetConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlConnection.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at Dennis.Data.MySqlClient.MySqlDbExecutor.ExecuteAsync(MySqlCommand command, CancellationToken token, IMySqlDbTracing tracing) in E:\tvc\DbUtility-develop\Sources\Ivony.Data.MySql\MySqlClient\MySqlDbExecutor.cs:line 102
+   at Dennis.Data.BasicExecuteExtensions.ExecuteDataTableAsync(IMySqlAsyncDbExecutableQuery query, CancellationToken token) in E:\tvc\DbUtility-develop\Sources\Ivony.Data.MySql\BasicExecuteExtensions.cs:line 41
+   at Dennis.Data.MySqlEntityExtensions.ExecuteEntitiesAsync[T](IMySqlAsyncDbExecutableQuery query, Func`2 converter, CancellationToken token) in E:\tvc\DbUtility-develop\Sources\Ivony.Data.MySql\EntityExtensions.cs:line 107
+   at App.Site.Data.BaseService.AdvertisementManager.LoadAdvertisements(String pageType, String catalogCode) in D:\Appservice\Bak\src\Services\Site\src\App.Site.Data\BaseService\AdvertisementManager.cs:line 61
+   at App.Site.Core.RepositoryAdvertisement.LoadAdvertisements(String pageType, String catalogCode) in D:\Appservice\Bak\src\Services\Site\src\App.Site.Core\RepositoryAdvertisement.cs:line 19
+   at App.Site.Controllers.Advertisement.LoadAdvertisements(String pageType, String catalogCode) in D:\Appservice\Bak\src\Services\Site\src\App.Site\Controllers\Advertisement.cs:line 29
+   at lambda_method75(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.MiddlewareAnalysis.AnalysisMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14:49:35 ERR] An unhandled exception has occurred while executing the request.
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+ ---> System.ArgumentException: The host name or IP address is invalid.
+   at MySql.Data.Common.StreamCreator.GetTcpStreamAsync(MySqlConnectionStringBuilder settings, CancellationToken cancellationToken, Boolean execAsync)
+   at MySql.Data.Common.StreamCreator.GetStreamAsync(MySqlConnectionStringBuilder settings, CancellationToken cancellationToken, Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.NativeDriver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.CreateAsync(MySqlConnectionStringBuilder settings, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.CreateAsync(MySqlConnectionStringBuilder settings, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriverAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.GetConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlConnection.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at Dennis.Data.MySqlClient.MySqlDbExecutor.ExecuteAsync(MySqlCommand command, CancellationToken token, IMySqlDbTracing tracing) in E:\tvc\DbUtility-develop\Sources\Ivony.Data.MySql\MySqlClient\MySqlDbExecutor.cs:line 102
+   at Dennis.Data.BasicExecuteExtensions.ExecuteDataTableAsync(IMySqlAsyncDbExecutableQuery query, CancellationToken token) in E:\tvc\DbUtility-develop\Sources\Ivony.Data.MySql\BasicExecuteExtensions.cs:line 41
+   at Dennis.Data.MySqlEntityExtensions.ExecuteEntitiesAsync[T](IMySqlAsyncDbExecutableQuery query, Func`2 converter, CancellationToken token) in E:\tvc\DbUtility-develop\Sources\Ivony.Data.MySql\EntityExtensions.cs:line 107
+   at App.Site.Data.BaseService.AdvertisementManager.LoadAdvertisements(String pageType, String catalogCode) in D:\Appservice\Bak\src\Services\Site\src\App.Site.Data\BaseService\AdvertisementManager.cs:line 61
+   at App.Site.Core.RepositoryAdvertisement.LoadAdvertisements(String pageType, String catalogCode) in D:\Appservice\Bak\src\Services\Site\src\App.Site.Core\RepositoryAdvertisement.cs:line 19
+   at App.Site.Controllers.Advertisement.LoadAdvertisements(String pageType, String catalogCode) in D:\Appservice\Bak\src\Services\Site\src\App.Site\Controllers\Advertisement.cs:line 29
+   at lambda_method65(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.MiddlewareAnalysis.AnalysisMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)

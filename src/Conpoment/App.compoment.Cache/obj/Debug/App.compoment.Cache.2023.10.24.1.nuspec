@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>App.compoment.Cache</id>
+    <version>2023.10.24.1</version>
+    <authors>App.compoment.Cache</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net7.0">
+        <dependency id="App.Compoment.Library" version="2023.9.20.1" exclude="Build,Analyzers" />
+        <dependency id="DMS.Common" version="4.4.2" exclude="Build,Analyzers" />
+        <dependency id="StackExchange.Redis" version="2.6.122" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Appservice\src\Conpoment\App.compoment.Cache\bin\Debug\net7.0\App.compoment.Cache.dll" target="lib\net7.0\App.compoment.Cache.dll" />
+  </files>
+</package>

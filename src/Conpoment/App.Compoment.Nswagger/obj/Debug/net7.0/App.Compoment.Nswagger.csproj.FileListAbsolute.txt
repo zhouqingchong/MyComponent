@@ -1,0 +1,12 @@
+D:\Appservice\src\Conpoment\App.Compoment.Nswagger\bin\Debug\net7.0\App.Compoment.Nswagger.deps.json
+D:\Appservice\src\Conpoment\App.Compoment.Nswagger\bin\Debug\net7.0\App.Compoment.Nswagger.dll
+D:\Appservice\src\Conpoment\App.Compoment.Nswagger\bin\Debug\net7.0\App.Compoment.Nswagger.pdb
+D:\Appservice\src\Conpoment\App.Compoment.Nswagger\obj\Debug\net7.0\App.Compoment.Nswagger.csproj.AssemblyReference.cache
+D:\Appservice\src\Conpoment\App.Compoment.Nswagger\obj\Debug\net7.0\App.Compoment.Nswagger.GeneratedMSBuildEditorConfig.editorconfig
+D:\Appservice\src\Conpoment\App.Compoment.Nswagger\obj\Debug\net7.0\App.Compoment.Nswagger.AssemblyInfoInputs.cache
+D:\Appservice\src\Conpoment\App.Compoment.Nswagger\obj\Debug\net7.0\App.Compoment.Nswagger.AssemblyInfo.cs
+D:\Appservice\src\Conpoment\App.Compoment.Nswagger\obj\Debug\net7.0\App.Compoment.Nswagger.csproj.CoreCompileInputs.cache
+D:\Appservice\src\Conpoment\App.Compoment.Nswagger\obj\Debug\net7.0\App.Compoment.Nswagger.dll
+D:\Appservice\src\Conpoment\App.Compoment.Nswagger\obj\Debug\net7.0\refint\App.Compoment.Nswagger.dll
+D:\Appservice\src\Conpoment\App.Compoment.Nswagger\obj\Debug\net7.0\App.Compoment.Nswagger.pdb
+D:\Appservice\src\Conpoment\App.Compoment.Nswagger\obj\Debug\net7.0\ref\App.Compoment.Nswagger.dll

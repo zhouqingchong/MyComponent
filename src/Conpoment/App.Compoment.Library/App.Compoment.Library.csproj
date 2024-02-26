@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <AssemblyVersion>2023.10.24.1</AssemblyVersion>
+	  <FileVersion>2023.10.24.1</FileVersion>
+	  <Version>2023.10.24.1</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DMS.Common" Version="4.4.2" />
+    <PackageReference Include="MessagePack.Annotations" Version="2.5.124" />
+  </ItemGroup>
+
+</Project>

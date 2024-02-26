@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Conpoment\App.Compoment.Enterprise\App.Compoment.Enterprise.csproj" />
+    <ProjectReference Include="..\..\..\..\Conpoment\App.Compoment.Library\App.Compoment.Library.csproj" />
+    <ProjectReference Include="..\..\..\Users\src\App.Users.Constract\App.Users.Constract.csproj" />
+    <ProjectReference Include="..\..\..\Users\src\App.Users.Data\App.Users.Data.csproj" />
+    <ProjectReference Include="..\App.Site.Contract\App.Site.Contract.csproj" />
+    <ProjectReference Include="..\App.Site.Data\App.Site.Data.csproj" />
+  </ItemGroup>
+
+</Project>

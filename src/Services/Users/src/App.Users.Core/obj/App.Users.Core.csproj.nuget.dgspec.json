@@ -1,0 +1,572 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Appservice\\Bak\\src\\Services\\Users\\src\\App.Users.Core\\App.Users.Core.csproj": {}
+  },
+  "projects": {
+    "D:\\Appservice\\Bak\\src\\Conpoment\\App.compoment.Cache\\App.compoment.Cache.csproj": {
+      "version": "2023.10.24.1",
+      "restore": {
+        "projectUniqueName": "D:\\Appservice\\Bak\\src\\Conpoment\\App.compoment.Cache\\App.compoment.Cache.csproj",
+        "projectName": "App.compoment.Cache",
+        "projectPath": "D:\\Appservice\\Bak\\src\\Conpoment\\App.compoment.Cache\\App.compoment.Cache.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\Appservice\\Bak\\src\\Conpoment\\App.compoment.Cache\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\VisualStudio\\Pakeage\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Library\\App.Compoment.Library.csproj": {
+                "projectPath": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Library\\App.Compoment.Library.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "DMS.Common": {
+              "target": "Package",
+              "version": "[4.4.2, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.6.122, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Enterprise\\App.Compoment.Enterprise.csproj": {
+      "version": "2023.10.24.1",
+      "restore": {
+        "projectUniqueName": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Enterprise\\App.Compoment.Enterprise.csproj",
+        "projectName": "App.Compoment.Enterprise",
+        "projectPath": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Enterprise\\App.Compoment.Enterprise.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Enterprise\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\VisualStudio\\Pakeage\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Framework\\App.Compoment.Framework.csproj": {
+                "projectPath": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Framework\\App.Compoment.Framework.csproj"
+              },
+              "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Host\\App.Compoment.Host.csproj": {
+                "projectPath": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Host\\App.Compoment.Host.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Framework\\App.Compoment.Framework.csproj": {
+      "version": "2023.10.24.1",
+      "restore": {
+        "projectUniqueName": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Framework\\App.Compoment.Framework.csproj",
+        "projectName": "App.Compoment.Framework",
+        "projectPath": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Framework\\App.Compoment.Framework.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Framework\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\VisualStudio\\Pakeage\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Appservice\\Bak\\src\\Conpoment\\App.compoment.Cache\\App.compoment.Cache.csproj": {
+                "projectPath": "D:\\Appservice\\Bak\\src\\Conpoment\\App.compoment.Cache\\App.compoment.Cache.csproj"
+              },
+              "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Host\\App.Compoment.Host.csproj": {
+                "projectPath": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Host\\App.Compoment.Host.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Host\\App.Compoment.Host.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Host\\App.Compoment.Host.csproj",
+        "projectName": "App.Compoment.Host",
+        "projectPath": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Host\\App.Compoment.Host.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Host\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\VisualStudio\\Pakeage\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Library\\App.Compoment.Library.csproj": {
+                "projectPath": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Library\\App.Compoment.Library.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Library\\App.Compoment.Library.csproj": {
+      "version": "2023.10.24.1",
+      "restore": {
+        "projectUniqueName": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Library\\App.Compoment.Library.csproj",
+        "projectName": "App.Compoment.Library",
+        "projectPath": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Library\\App.Compoment.Library.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Library\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\VisualStudio\\Pakeage\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "DMS.Common": {
+              "target": "Package",
+              "version": "[4.4.2, )"
+            },
+            "MessagePack.Annotations": {
+              "target": "Package",
+              "version": "[2.5.124, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Appservice\\Bak\\src\\Services\\Users\\src\\App.Users.Constract\\App.Users.Constract.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Appservice\\Bak\\src\\Services\\Users\\src\\App.Users.Constract\\App.Users.Constract.csproj",
+        "projectName": "App.Users.Constract",
+        "projectPath": "D:\\Appservice\\Bak\\src\\Services\\Users\\src\\App.Users.Constract\\App.Users.Constract.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\Appservice\\Bak\\src\\Services\\Users\\src\\App.Users.Constract\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\VisualStudio\\Pakeage\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Enterprise\\App.Compoment.Enterprise.csproj": {
+                "projectPath": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Enterprise\\App.Compoment.Enterprise.csproj"
+              },
+              "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Library\\App.Compoment.Library.csproj": {
+                "projectPath": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Library\\App.Compoment.Library.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Appservice\\Bak\\src\\Services\\Users\\src\\App.Users.Core\\App.Users.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Appservice\\Bak\\src\\Services\\Users\\src\\App.Users.Core\\App.Users.Core.csproj",
+        "projectName": "App.Users.Core",
+        "projectPath": "D:\\Appservice\\Bak\\src\\Services\\Users\\src\\App.Users.Core\\App.Users.Core.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\Appservice\\Bak\\src\\Services\\Users\\src\\App.Users.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\VisualStudio\\Pakeage\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Host\\App.Compoment.Host.csproj": {
+                "projectPath": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Host\\App.Compoment.Host.csproj"
+              },
+              "D:\\Appservice\\Bak\\src\\Services\\Users\\src\\App.Users.Constract\\App.Users.Constract.csproj": {
+                "projectPath": "D:\\Appservice\\Bak\\src\\Services\\Users\\src\\App.Users.Constract\\App.Users.Constract.csproj"
+              },
+              "D:\\Appservice\\Bak\\src\\Services\\Users\\src\\App.Users.Data\\App.Users.Data.csproj": {
+                "projectPath": "D:\\Appservice\\Bak\\src\\Services\\Users\\src\\App.Users.Data\\App.Users.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Appservice\\Bak\\src\\Services\\Users\\src\\App.Users.Data\\App.Users.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Appservice\\Bak\\src\\Services\\Users\\src\\App.Users.Data\\App.Users.Data.csproj",
+        "projectName": "App.Users.Data",
+        "projectPath": "D:\\Appservice\\Bak\\src\\Services\\Users\\src\\App.Users.Data\\App.Users.Data.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\Appservice\\Bak\\src\\Services\\Users\\src\\App.Users.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\VisualStudio\\Pakeage\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Enterprise\\App.Compoment.Enterprise.csproj": {
+                "projectPath": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Enterprise\\App.Compoment.Enterprise.csproj"
+              },
+              "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Library\\App.Compoment.Library.csproj": {
+                "projectPath": "D:\\Appservice\\Bak\\src\\Conpoment\\App.Compoment.Library\\App.Compoment.Library.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

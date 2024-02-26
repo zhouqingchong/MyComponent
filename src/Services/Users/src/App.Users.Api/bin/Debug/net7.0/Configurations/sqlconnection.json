@@ -1,0 +1,29 @@
+{
+  "connectionStrings": {
+    "TVCMALL": "server=52.80.87.239;database=tvcmall;Integrated Security=false;Uid=test;pwd='a8;Aah?v!pO;Vza';",
+
+    "TVC_IC_Mirror": "server=52.80.87.239;database=TVC_IC_Mirror;Integrated Security=false;Uid=test;pwd='a8;Aah?v!pO;Vza';",
+
+    "TVC_Site": "server=52.80.87.239;database=TVC_Site;Integrated Security=false;Uid=test;pwd='a8;Aah?v!pO;Vza';",
+
+    "TVC_Payment": "server=52.80.87.239;database=TVC_Payment;Integrated Security=false;Uid=test;pwd='a8;Aah?v!pO;Vza';",
+
+    "TVC_Site_Product": "server=52.80.87.239;database=TVC_Site;Integrated Security=false;Uid=test;pwd='a8;Aah?v!pO;Vza';",
+
+    "TVC_Site_Snapshot": "server=52.80.87.239;database=TVC_Site;Integrated Security=false;Uid=test;pwd='a8;Aah?v!pO;Vza';",
+
+    "MailDb": "server=52.80.87.239;database=Mail;Integrated Security=false;Uid=test;pwd='a8;Aah?v!pO;Vza';",
+
+    "Hubble": "Data Source=192.168.1.16;Initial Catalog=TVC_Site",
+
+    //MySql.Data.MySqlClient
+    "MYSQL_TVC_SITE_READONLY": "Data Source=tvc-mall-test-ro.cvlcv2haqwvn.rds.cn-north-1.amazonaws.com.cn;port=3306;Initial Catalog=tvc_site_new;user id=tvcmall;password=Tvc6f3b888;Pooling=true",
+   
+    "MYSQL_TVC_Site": "Data Source=tvc-mall-test.cvlcv2haqwvn.rds.cn-north-1.amazonaws.com.cn;port=3306;Initial Catalog=tvc_site_new;user id=tvcmall;password=Tvc6f3b888;Pooling=true",
+    
+    "MYSQL_TVC_PAYMENT": "Data Source=tvc-mall-test.cvlcv2haqwvn.rds.cn-north-1.amazonaws.com.cn;port=3306;Initial Catalog=tvc_payment;user id=tvcmall;password=Tvc6f3b888;Pooling=true",
+   
+    "MYSQL_TVC_MAIL": "Data Source=tvc-mall-test.cvlcv2haqwvn.rds.cn-north-1.amazonaws.com.cn;port=3306;Initial Catalog=mail;user id=tvcmall;password=Tvc6f3b888;Pooling=true"
+  },
+  "UseMysql":true
+}

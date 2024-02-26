@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<AssemblyVersion>2023.10.24.1</AssemblyVersion>
+		<FileVersion>2023.10.24.1</FileVersion>
+		<Version>2023.10.24.1</Version>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="DMS.Common" Version="4.4.2" />
+		<PackageReference Include="StackExchange.Redis" Version="2.6.122" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\App.Compoment.Library\App.Compoment.Library.csproj" />
+	</ItemGroup>
+
+</Project>

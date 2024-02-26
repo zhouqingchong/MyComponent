@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+	  <AssemblyVersion>2023.10.24.1</AssemblyVersion>
+	  <FileVersion>2023.10.24.1</FileVersion>
+	  <Version>2023.10.24.1</Version>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\App.Compoment.Framework\App.Compoment.Framework.csproj" />
+    <ProjectReference Include="..\App.Compoment.Host\App.Compoment.Host.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DataPithy">
+      <HintPath>..\..\..\Package\DataPithy.dll</HintPath>
+    </Reference>
+    <Reference Include="Dennis.Data.MySql">
+      <HintPath>..\..\..\Package\Dennis.Data.MySql.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

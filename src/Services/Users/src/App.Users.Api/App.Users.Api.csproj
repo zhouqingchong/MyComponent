@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>5b45daf3-8450-4070-864d-2f1dd685fa8b</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Content Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DMS.Common" Version="4.4.2" />
+    <PackageReference Include="Ivony.Data.MySql" Version="4.5.2" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.10" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Conpoment\App.Compoment.Auth\App.Compoment.Auth.csproj" />
+    <ProjectReference Include="..\..\..\..\Conpoment\App.compoment.Cache\App.compoment.Cache.csproj" />
+    <ProjectReference Include="..\..\..\..\Conpoment\App.Compoment.Extension\App.Compoment.Extension.csproj" />
+    <ProjectReference Include="..\..\..\..\Conpoment\App.Compoment.Host\App.Compoment.Host.csproj" />
+    <ProjectReference Include="..\..\..\..\Conpoment\App.Compoment.Library\App.Compoment.Library.csproj" />
+    <ProjectReference Include="..\..\..\..\Conpoment\App.Compoment.Swagger\App.Compoment.Swagger.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DataPithy">
+      <HintPath>..\..\..\..\..\Package\DataPithy.dll</HintPath>
+    </Reference>
+    <Reference Include="Dennis.Data.MySql">
+      <HintPath>..\..\..\..\..\Package\Dennis.Data.MySql.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

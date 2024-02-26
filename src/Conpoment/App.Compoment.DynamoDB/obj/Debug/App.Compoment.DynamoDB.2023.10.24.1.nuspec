@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>App.Compoment.DynamoDB</id>
+    <version>2023.10.24.1</version>
+    <authors>App.Compoment.DynamoDB</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net7.0">
+        <dependency id="App.Compoment.Enterprise" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="App.Compoment.Extension" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="App.Compoment.Library" version="2023.9.20.1" exclude="Build,Analyzers" />
+        <dependency id="AWSSDK.DynamoDBv2" version="3.7.202" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="7.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Appservice\src\Conpoment\App.Compoment.DynamoDB\bin\Debug\net7.0\App.Compoment.DynamoDB.dll" target="lib\net7.0\App.Compoment.DynamoDB.dll" />
+  </files>
+</package>

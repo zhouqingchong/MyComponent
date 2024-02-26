@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Conpoment\App.Compoment.Host\App.Compoment.Host.csproj" />
+    <ProjectReference Include="..\App.Users.Constract\App.Users.Constract.csproj" />
+    <ProjectReference Include="..\App.Users.Data\App.Users.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DataPithy">
+      <HintPath>..\..\..\..\..\Package\DataPithy.dll</HintPath>
+    </Reference>
+    <Reference Include="Dennis.Data.MySql">
+      <HintPath>..\..\..\..\..\Package\Dennis.Data.MySql.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>App.Site</name>
+    </assembly>
+    <members>
+        <member name="M:App.Site.Controllers.Advertisement.LoadAdvertisements(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="pageType"></param>
+            <param name="catalogCode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:App.Site.Controllers.FeedBack">
+            <summary>
+            表单
+            </summary>
+        </member>
+        <member name="M:App.Site.Controllers.FeedBack.AddBooks(App.Compoment.Enterprise.Site.FeedBooks.AddGuestBook)">
+            <summary>
+            普通表单
+            </summary>
+            <param name="book"></param>
+            <returns></returns>
+        </member>
+        <member name="M:App.Site.Controllers.FeedBack.AddGuestBookForMark(App.Compoment.Enterprise.Site.FeedBooks.AddGuestBook)">
+            <summary>
+            普通表单
+            </summary>
+            <param name="book"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

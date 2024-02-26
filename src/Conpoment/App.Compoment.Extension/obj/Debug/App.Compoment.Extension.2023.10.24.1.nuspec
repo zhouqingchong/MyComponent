@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>App.Compoment.Extension</id>
+    <version>2023.10.24.1</version>
+    <authors>App.Compoment.Extension</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net7.0">
+        <dependency id="App.Compoment.Library" version="2023.9.20.1" exclude="Build,Analyzers" />
+        <dependency id="Consul" version="1.6.10.9" exclude="Build,Analyzers" />
+        <dependency id="Elastic.Clients.Elasticsearch" version="8.9.3" exclude="Build,Analyzers" />
+        <dependency id="Serilog.Enrichers.Environment" version="2.2.0" exclude="Build,Analyzers" />
+        <dependency id="Serilog.Enrichers.Process" version="2.0.2" exclude="Build,Analyzers" />
+        <dependency id="Serilog.Enrichers.Thread" version="3.1.0" exclude="Build,Analyzers" />
+        <dependency id="Serilog.Exceptions" version="8.4.0" exclude="Build,Analyzers" />
+        <dependency id="Serilog.Extensions.Hosting" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Serilog.Formatting.Compact" version="1.1.0" exclude="Build,Analyzers" />
+        <dependency id="Serilog.Sinks.Async" version="1.5.0" exclude="Build,Analyzers" />
+        <dependency id="Serilog.Sinks.Console" version="4.1.0" exclude="Build,Analyzers" />
+        <dependency id="Serilog.Sinks.Elasticsearch" version="9.0.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net7.0">
+        <frameworkReference name="Microsoft.AspNetCore.App" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="D:\Appservice\src\Conpoment\App.Compoment.Extension\bin\Debug\net7.0\App.Compoment.Extension.dll" target="lib\net7.0\App.Compoment.Extension.dll" />
+  </files>
+</package>

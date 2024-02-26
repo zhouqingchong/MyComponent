@@ -1,0 +1,139 @@
+{
+  "projects": [
+
+  ],
+  "path": {
+    "Logs": "E:\\Logs\\AppServices",
+    "Temp": "E:\\Temp"
+  },
+  "client-scripting": {
+    "cors": {
+      "allow": [
+        "http://dev.tvc-mall.com",
+        "http://www.tvc-mall.com",
+        "http://trunk.tvc-mall.com",
+        "http://dev.seculife.com",
+        "http://trunk.seculife.com",
+        "http://www.seculife.com",
+        "http://dev.cellzmate.com",
+        "http://www.cellzmate.com",
+        "https://www.cellzmate.com",
+        "http://trunk.cellzmate.com",
+        "http://help.seculife.com",
+        "http://help.phonepartstore.com",
+        "https://www.tvc-mall.com",
+        "https://new.tvc-mall.com",
+        "http://new.tvc-mall.com",
+        "https://www.seculife.com"
+      ]
+    }
+  },
+  "order.discount": {
+    "tips": {
+      "DirectDiscount": {
+      }
+    }
+  },
+  "logs": {
+    "general": "E:\\Logs\\AppServices\\General",
+    "errors": "E:\\Logs\\AppServices\\Errors",
+    "data": "E:\\Logs\\AppServices\\DataLogs",
+    "mode": "Info",
+    "emailfrom": "debug@inc.tvc-tech.com",
+    "emailto": "dennis@inc.tvc-tech.com,rob@inc.tvc-tech.com,rumbel@inc.tvc-tech.com,linven@inc.tvc-tech.com"
+  },
+  "route": {
+    "site-route": {
+      "enable": true,
+      "default-site": "TVCMall"
+    }
+  },
+  "authorize": {
+    "white-list": [
+      "113.106.91.92",
+      "113.106.91.86",
+      "52.22.155.187",
+      "183.54.73.127",
+      "54.88.55.15",
+      "14.153.33.70",
+      "52.74.138.68",
+      "219.134.80.61",
+      "52.22.153.197",
+      "52.200.235.241",
+      "112.74.213.168"
+    ]
+  },
+  "order-images": {
+    "ImageServer": "http://unlogo.img.tvc-mall.com",
+    "DownloadServer": {
+      "VirtualPath": "http://appservice.tvc-mall.com/packages/",
+      "PhysicalPath": "E:\\Files\\AppService\\Packages"
+    },
+    "DownloadQuota": "100,300,500,1000,2000,-1,-1",
+    "DownloadListMaxQty": "200"
+  },
+  "product-customize": {
+    "ImageServer": "http://upload.img.tvc-mall.com/"
+  },
+  "ali-oss": {
+    "AliOssServiceUrl": "http://oss-cn-shenzhen.aliyuncs.com",
+    "AliOssServiceAccessId": "UklOSWRNUWdCODl6TENvYQ==",
+    "AliOssServiceAccessKey": "VXNrQXNSTWhjcFUzQmxuVXlRQ1RxdmJCYWsybTRO",
+    "AliOssPublicBucketName": "tvc-ic-public"
+  },
+  "openapi": {
+    "images": {
+      "unlogo-image-host": "http://unlogo.img.tvc-mall.com/",
+      "image-path": "E:\\Files\\OpenAPI\\Packages",
+      "image-host": "http://openapi.tvc-mall.com/packages/",
+      "water-mark": "E:\\Files\\OpenAPI\\Watermarks",
+      "log-path": "E:\\Logs\\OpenAPI"
+    }
+  },
+  "default-sales-contactid": "7", // 7RITa  74 韩勇 12110 陈雪连 11581 huan@tvc-mall.com 11165 Yelly@tvc-mall.com
+  "product.list": {
+    "enable-list-cache": false,
+    "redirect-ela-engine_host": [ "http://54.222.206.86:19300/" ],
+    "use-dynamodb-cache": true,
+    "ela-authentication": {
+      "enable": true,
+      "account": {
+        "username": "elasticsearch-proxy",
+        "password": "XBpLmv)zlXck%"
+      }
+    },
+    "esprintjson": true //Reason_20220927  是否打印出原始查询语句，如果不配置默认不打印
+  },
+  "split-order-filter": {
+    "power-weight": 3,
+    "power-rate": 0.15
+  },
+  "database": {
+    "use-mysql": true
+  },
+  //GA信息
+  "GAinfo": {
+    "purchase": "NYwZGQA1Q768wC6hurGSEQ", //支付成功的秘钥
+    "refund": "36hHg0aGQjSm4AG8SyfzcQ", //支付失败的秘钥
+    "measurement_id": "G-BC0H2EDK4B",
+    "gaurl": "https://www.google-analytics.com/mp/collect?&measurement_id=G-BC0H2EDK4B&api_secret=NYwZGQA1Q768wC6hurGSEQ"
+  },
+  "cache": {
+    "type": "memory",
+    "enable": false
+  },
+  "memcache": {
+    "hosts": "172.30.0.57|172.30.0.115",
+    "enable": false
+  },
+  "redis": {
+    "enable": true,
+    "cluster": true,
+    "write-hosts": "127.0.0.1:6379",
+    "read-hosts": "127.0.0.1:6379"
+  },
+  "fraudrisk": { "remote-rule": "http://boss.test.dvp/OpenData/SuspiciousUserDetectionRules.json" },
+  "product": {
+    "bulkbuy-version": 1 //区分新老板批量购买价格计算方式
+  }
+}
